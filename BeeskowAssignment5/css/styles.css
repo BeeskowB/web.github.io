@@ -1,0 +1,364 @@
+
+/*I certify that the CSS file I am submitting is all my own work.
+ None of it is copied from any source or any person.
+ Signed: Bryce Beeskow
+ Date: 2/09/2025*/
+/*Author: Bryce Beeskow
+ Date: 2/09/2025
+ Class: CSC135
+ Project: Project Part 3
+ File Name: scripts.css
+ Description: Styling for website*/
+/* Add references if applicable */
+/* Styling for whole document -- add comments throughout your file */ 
+
+
+/* General resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  width: 480px;
+  text-align: center;
+}
+
+/*Home Page image*/
+img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Header Styling */
+header {
+  background-color: rgb(16 125 53) ;
+  float: left;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/*styling for header h1*/
+header h1 {
+  font-size: 30px;
+  font-family: sans-serif;
+  font-family: cursive;
+  text-align: left;
+  float: left;
+  margin-left: 20px;
+}
+
+/*styling for header ul*/
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(16 125 53);
+  height: 50px;
+  width: 480px;
+  
+}
+
+/*styling for header li*/
+header li {
+  float: right;
+  margin: auto;
+  display: inline;
+}
+
+/*styling for header li a*/
+header li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 7px;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+
+/* Main content */
+main {
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #CE2B37;
+  color: white;
+  text-align: center;
+}
+/* Return to Top Button Styling */
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+#return-to-top:hover {
+  background-color: #0056b3;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    padding: 20px;
+}
+
+.grid-item h2{
+  font-size: 25px;
+}
+
+/*styling grid items*/
+.placestovisit .grid-item {
+  background-color: gray;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5em;
+  border-radius: 10px;
+}
+
+/* grid images styling for home page */
+.homepage .grid-item img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+  border-radius: 8px; 
+}
+
+/* grid images styling for places to visit page */
+.placestovisit .grid-item img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+  border-radius: 8px; 
+}
+
+/*styling for grid item paragraph*/
+.grid-item p {
+  font-size: small;
+  color: white;
+}
+
+/*heading for placestovisit page*/
+.pagetitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 40px;  
+  margin-bottom: 20px;  
+  font-weight: bold;
+  color: #333;
+  grid-column: span 2;
+}
+
+/*styling for the information on home page*/
+.infoonhome {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 40px;  
+  margin-bottom: 20px; 
+  color: #333;
+  grid-column: span 2;
+}
+
+/* Image styling for packages page */
+.packages img {
+  width: 100%;  
+  max-width: 300px;
+  height: auto;  
+  margin: 20px 0; 
+  display: block; 
+  border-radius: 8px; 
+}
+
+/* Flexbox Container for Packages */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Flex Item */
+.flex-item {
+  background-color: gray;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+  min-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Styling for List inside Flex Items */
+.flex-item ul {
+  list-style-type: none; 
+  padding: 0;         
+  margin: 0;        
+  text-align: left;     
+}
+
+/*flex item list item */
+.flex-item li {
+  margin-bottom: 10px; 
+  font-size: 1.1em;  
+}
+
+
+
+
+/* Mobile-first: Phone (width: 400px) */
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  section {
+    padding: 30px;
+    margin: 15px 0;
+  }
+
+  section h1 {
+    font-size: 1.3rem;
+  }
+
+  #return-to-top {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+/* Tablet (width: 740px to 900px) */
+@media (min-width: 740px) and (max-width: 900px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  nav a {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+
+  section {
+    padding: 35px;
+  }
+
+  section h1 {
+    font-size: 1.4rem;
+  }
+
+  #return-to-top {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+/* Tablet / Small Desktop (width: 1020px) */
+@media (min-width: 1020px) {
+  nav ul {
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+
+  section {
+    padding: 40px;
+  }
+
+  section h1 {
+    font-size: 1.6rem;
+  }
+
+  #return-to-top {
+    font-size: 20px;
+    padding: 14px;
+  }
+
+  footer {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+/* Desktop (width: 1280px to 1920px) */
+@media (min-width: 1280px) and (max-width: 1920px) {
+  nav ul {
+    justify-content: space-around;
+    padding: 0 80px;
+  }
+
+  nav a {
+    font-size: 18px;
+    padding: 14px 20px;
+  }
+
+  section {
+    padding: 50px;
+    margin: 30px 0;
+  }
+
+  section h1 {
+    font-size: 1.8rem;
+  }
+
+  #return-to-top {
+    font-size: 22px;
+    padding: 16px;
+  }
+
+  footer {
+    font-size: 18px;
+    padding: 16px;
+  }
+}
